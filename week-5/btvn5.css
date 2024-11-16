@@ -63,6 +63,7 @@ input{
 }
 .main .menu button:hover{
 background-color: rgb(224, 166, 59);
+color:rgb(226, 226, 107);
 }
 .sp .item img{
     width: 300px;
@@ -75,6 +76,7 @@ p{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    color:rgb(85, 39, 32);
 }
 .item button{
     width: 300px;
