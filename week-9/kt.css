@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --color-primary:#F06C25;
+    --text-font:"Be Vietnam Pro", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    padding: 60px 40px 0px 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+.banner{
+    position: relative;
+    top: 0;
+    filter: brightness(0.6);
+}
+.hd{
+    position: absolute;
+    top: 840px;
+}
+.dau .anh {
+    width: 100%;
+}
+
+.dau{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 25%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    list-style-type: none;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    display: none;
+}
+.cha:hover .con{
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+    
+}
+.cha:hover .con li{
+    color: black;
+    font-weight: 500;
+    text-align: right;
+}
+.cha:hover .con li:hover{
+    text-decoration: underline;
+    color: #F06C25;
+
+}
+.hd h1{
+    font-weight: bold;
+    color: white;
+    font-size: 56px;
+}
+.hd p{
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+.main .h1 h1{
+font-weight: bold;
+font-size: 48px;
+text-align: center;
+margin: 30px 50px 30px 50px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.item1{
+    justify-content:center ;
+    display: flex;
+    flex-direction: row;
+}
+.item2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    padding: 10px 30px 10px 10px;
+    justify-content: space-between;
+    width: 450px;
+    border: solid 1px gainsboro;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+.item .avt{
+    width: 200px;
+    height: 200px;
+}
+.item .avt img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.item .chu{
+    width: 200px;
+    margin: 40px 20px 0px 10px;
+}
+.item .chu h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+.item .chu h2{
+    font-weight: bold;
+    color: #F06C25;
+}
+.logo{
+    width: 200px;
+}
+.act h1{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    margin: 30px 50px 30px 50px; 
+}
+
+.act .item-act .act-anh{
+    width: 500px;
+    height: 300px;
+    padding-bottom: 30px;
+}
+.act .item-act .act-anh img{
+    width: 100%;
+    height: 100%;
+}
+.item-act {
+position: relative;
+}
+.item-act p{
+    position: absolute;
+    margin: 10px 0px 0px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+}
+.actitem{
+    padding-left: 300px;
+    padding-right: 300px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-top: solid;
+    color: #F06C25;
+}
+.logo img{
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+}
+.class h1{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    margin: 30px 50px 30px 50px; 
+}
+
+
+.item-class1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 600px 10px 600px;
+    
+}
+ .img .anh{
+    width: 200px;
+    height: 200px;
+}
+.img .anh img{
+    width: 100%;
+    height: 100%;
+    border:#A4A4A4 solid 1px;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+}
+.item-class1 .img p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width:1920px) {
+    .actitem {
+        padding-left: 376px;
+    }
+    .item-class1 {
+        padding: 10px 650px 10px 650px;
+}
+}
+@media screen and (max-width:1024px)
+{
+    nav{
+        width: 52%;
+    }
+    .hd{
+        top: 460px;
+    }
+    .hd h1{
+        font-size: 36px;
+    }
+    .actitem {
+        padding-left: 60px;
+    }
+    .act .item-act .act-anh{
+        width: 450px;
+        height: 300px;
+        padding-bottom: 30px;
+        padding-right: 10px;
+    }
+    .item-class1 {
+        padding: 10px 250px 10px 250px;
+    }
+}
