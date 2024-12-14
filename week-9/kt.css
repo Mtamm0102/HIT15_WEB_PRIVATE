@@ -249,3 +249,74 @@ position: relative;
         padding: 10px 250px 10px 250px;
     }
 }
+@media screen and (max-width:380px){
+    .dau .anh {
+        width: 20%;
+        height: 20%;
+    }
+    .dau .anh img{
+        width: 100%;
+        height: 100%;
+    }
+    nav{
+        width: 60%;
+    }
+    nav ul li {
+        font-size: 16px;
+    }
+    .head{
+        padding: 10px 10px 0px 10px;
+    }
+    .hd h1{
+        font-size: 16px;
+    }
+    .hd p{
+        font-size: 10px;
+    }
+    .hd{
+        top: 160px;
+    }
+    .main .h1 h1 {
+        font-size: 36px;
+        text-align: center;
+        margin: 10px 20px 10px 20px;
+    }
+    .item1{
+        display: block;
+    }
+    .item2{
+        display: block;
+    }
+    .item {
+        padding: 20px 10px 10px 10px;
+        margin-left: 20px;
+        width: 350px;
+    }
+    .item .avt{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+    }
+    .act h1{
+        font-size: 36px;
+        text-align: center;
+    }
+    .actitem{
+        display: block;
+    }
+    .act .item-act .act-anh{
+        width: 350px;
+        height: 250px;
+    }
+    .class h1 {
+        font-size: 36px;
+    }
+    .img .anh {
+        width: 200px;
+        height: 200px;
+        padding: 10px 10px 10px 10px;
+    }
+    .item-class1 {
+        padding: 10px 10px 10px 10px;
+    }
+}
