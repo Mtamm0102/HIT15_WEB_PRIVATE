@@ -23,9 +23,15 @@
     top: 0;
     filter: brightness(0.6);
 }
-.hd{
+.duoi{
     position: absolute;
     top: 840px;
+}
+.head .duoi h2{
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    font-size: 56px;
 }
 .dau .anh {
     width: 100%;
@@ -47,7 +53,6 @@ nav ul li{
     color: white;
     font-weight: 700;
     font-size: 24px;
-    
 }
 .cha{
     position: relative;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN 2 </title>
+</head>
+
+<body>
+    <script>
+        let name = prompt("Nhập tháng của bạn: ");
+        let month = name.toLocaleLowerCase();
+        if (month === 'january' || month === 'march' || month === 'may' || month === 'july' || month === 'august' || month === 'october' || month === 'december') {
+            alert(`${month} has 31 days `);
+        }
+        else if (month === 'february') {
+            alert(`${month} has 28 days `);
+        }
+        else {
+            alert(`${month} has 30 days `);
+        }
+    </script>
+</body>
+
+</html>

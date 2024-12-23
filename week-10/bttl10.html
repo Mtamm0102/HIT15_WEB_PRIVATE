@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //nguyen thuy khong thay doi duoc
+         let str ="Hello";
+         str[0]= 'a';
+         console.log(str);
+        //ko nguyen thuy
+        let array =[1,2,3];
+        array[0]=10;
+        console.log(array);
+        let person ={
+            name: "Tam",
+            age:19,
+        }
+        console.log(person);
+       let arr1=[1,2,3];
+       let arr2=arr1;
+       console.log(arr1==arr2);
+
+       let name = "Alice";
+console.log(typeof name); // string
+let age = 20;
+console.log(typeof age); // number
+let isHappy = true;
+console.log(typeof isHappy); // boolean
+//khai bao trong js
+/*
+ var str1 = "hello";
+ var str1="index";
+  let , const
+ */
+ let str1 = "hello";
+ let str2="index";
+ console.log(str1);
+ const str3="hi";
+  console.log(str3);
+ // console.log(a); // undefined
+
+
+function test() {
+    let a = 10;
+    if(true) {
+         console.log (a);
+
+    }
+    console.log(a)
+}
+test();
+
+
+let str5= "hello";
+let str4="world";
+let tmp= str5+ " "+str4;
+console.log(tmp);
+
+let str6 = "Hello";
+console.log(str6.length);
+console.log(str6[1]);
+console.log(str6.toUpperCase());
+console.log(str6.toLocaleLowerCase())
+let b=10;
+let str7="b="+b+" la gia tri can tim";
+console.log(str7)
+let str8=`b=${b} la gia tri can tim` ;
+console.log(str8);
+ let str9= "5";
+ let num= 5 ;
+ console.log(str9);
+ console.log(num);
+ //doi tu str sang num
+ console.log(+str9);
+ console.log(Number(str9));
+ console.log(parseInt(str9));
+ console.log(parseFloat(str9));
+ //doi tu num sang str
+ console.log(num+"");
+ console.log(`${num}`);
+ 
+ console.log(str9==num);//so sanh gia tri
+ console.log(str9===num);//so sanh kieu du lieu
+ console.log(str9!=num);
+ console.log(str9!==num);
+ let sum = 0;
+ let number=[1,2,3,4,5];
+ for(let a of number)
+ {
+console.log(a);
+sum+=a;
+
+ }
+ console.log(sum);
+ let name1=prompt("Ten ban la gi? " , "Tam");
+ console.log(name1);
+ alert(`toi ten la ${name1}`)
+    </script>
+</body>
+</html>
