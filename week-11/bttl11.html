@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+    //  let title = document.createElement("h1");
+    //   title.className = "title";
+    //   title.style.fontSize = "24px";
+    //   title.textContent = "Creating HTML element DOM Day 2";
+    //   console.log(title);
+    let title;
+      for (let i = 0; i < 3; i++) {
+        title = document.createElement("h1");
+        title.className = "title";
+        title.style.fontSize = "24px";
+        title.textContent = i;
+        console.log(title);
+        document.body.appendChild(title);
+      }
+
+    //   let titles;
+    //   for (let i = 0; i<3; i++)
+    //   {
+    //     titles=document.createElement("li");
+    //     titles.className="item";
+    //     titles.style.color="green";
+    //     titles.style.fontSize="32px";
+    //     titles.textContent="Item "+(i+1);
+    //     document.body.appendChild(titles);
+    //   }
+    //   let u = document.querySelector("ul li:last-child");
+    //   console.log(u);
+let ul = document.querySelector("ul"); // Lấy phần tử <ul>
+let titles;
+for (let i = 0; i < 3; i++) {
+  titles = document.createElement("li");
+  titles.className = "item";
+  titles.style.color = "green";
+  titles.style.fontSize = "32px";
+  titles.textContent = "Item " + (i + 1);
+  ul.appendChild(titles); // Thêm vào <ul>
+}
+let u = document.querySelector("ul li:last-child");
+console.log(u);
+ ul.removeChild(u) ;
+    </script>
+  </body>
+</html>

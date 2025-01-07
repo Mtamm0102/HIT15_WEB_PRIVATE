@@ -1,0 +1,37 @@
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+.nhap{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    justify-content: space-between;
+}
+.nhap input {
+    width: 80%;
+    height: 30px;
+    border: 3px #79d7be solid;
+}
+.nhap button{
+    width: 20%;
+    height: 38px;
+    margin-left: 5px;
+    border: none;
+  color: white;
+  background-color: #79d7be;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 150px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.so{
+    display: flex;
+    justify-content: space-around;
+}

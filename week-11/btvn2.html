@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="btvn2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sinh số tự động</h1>
+        <div class="nhap">
+        <input type="number" placeholder="Nhập số lượng">
+        <button>Tạo</button>
+    </div>
+    <div class="so">
+        <span>Số chắn: None</span>
+        <span>Số lẻ: None</span>
+        <span>Số nguyên tố: None</span>
+    </div>
+    <div class="grid-container">
+    </div>
+    <script>
+        let button=document.querySelector("button");
+        let input=document.querySelector("input"); 
+        let grid=document.querySelector(".grid-container");
+        let spanCount=document.querySelectorAll("span");
+        button.addEventListener("click", function() { //Xử lý sự kiện khi người dùng nhấn nút.
+            grid.innerHTML = ""; //Xóa nội dung cũ trong lưới hiển thị để làm mới danh sách số.
+            let primeCount=0;
+            let n=input.value;
+            let prime=primeSieve(n);
+            for (let i=0;i<n;i++) {
+                let number=document.createElement("div");
+                number.textContent=i;
+                if (prime[i]) {
+                    number.style.backgroundColor="#FD5E53";
+                    number.style.height='50px';
+                    number.style.paddingTop='25px';
+                    primeCount++;
+                }
+                else if (isEven(i)) {
+                    number.style.backgroundColor="#79d7be";
+                    number.style.height='50px';
+                    number.style.paddingTop='25px';
+                }
+                else {
+                    number.style.backgroundColor="#FDDB3A";
+                    number.style.height='50px';
+                    number.style.paddingTop='25px';
+                }
+                grid.appendChild(number);
+            }
+            if((n-1)%2===0) {
+                spanCount[0].textContent=`Số chẵn: ${parseInt((n-1)/2+1)}`;
+                spanCount[1].textContent=`Số lẻ: ${parseInt((n-1)/2)}`;
+            }
+            else {
+                spanCount[0].textContent=`Số chẵn: ${parseInt((n-1)/2+1)}`;
+                spanCount[1].textContent=`Số lẻ: ${parseInt((n-1)/2)+1}`;
+            }
+            spanCount[2].textContent="Số nguyên tố: "+primeCount;
+        })
+        function isEven(n) {
+            return n % 2 === 0;
+        }   
+        function primeSieve(n) {
+            let primes= new Array(n+1).fill(true);
+            primes[0] = false;
+            primes[1] = false;
+            for (let i=2;i<=n;i++) primes[i] = true;
+            for (let i = 2; i*i <= n; i++) {
+                if (primes[i]) {
+                    for (let j = i*i; j <= n; j += i)
+                        primes[j] = false;
+                }
+            }
+            return primes;
+        }
+    </script>
+</body>
+</html>
