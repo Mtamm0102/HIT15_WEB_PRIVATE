@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1,slice str.slice(startIndex, endIndex);
+        const text = "JavaScript is fun";
+        console.log(text.slice(0, 10)); // "JavaScript"
+        console.log(text.slice(11)); // "is fun"
+        console.log(text.slice(-3)); // "fun" (chỉ số âm tính từ cuối chuỗi)
+        console.log(text.slice(0, 5) + "..." + text.slice(-4));
+        // 2,substring str.substring(startIndex, endIndex);
+        const text1 = "JavaScript";
+        console.log(text1.substring(0, 4)); // "Java"
+        console.log(text1.substring(4)); // "Script"
+        console.log(text1.substring(4, 0)); // "Java" (hoán đổi tham số)
+        console.log(text1.substring(-4, 4)); // "Java" (chỉ số âm được coi là 0)
+        //3 trim str.trim();
+        const text2 = "   Hello World!   ";
+        console.log(text2.trim()); // "Hello World!"
+        //4 include str.includes(position, searchString);
+        const text3 = "JavaScript is awesome";
+        console.log(text3.includes("Java")); // true
+        console.log(text3.includes("script")); // false (phân biệt chữ hoa/chữ thường)
+        console.log(text3.includes("Java", 5)); // false (bắt đầu tìm từ chỉ số 5)
+        //5, str.split(separator, limit); hay dùng 
+        const text4 = "apple,banana,cherry";
+        console.log(text4.split(",")); // ["apple", "banana", "cherry"]
+        console.log(text4.split(",", 2)); // ["apple", "banana"]
+        console.log(text4.split("")); // ["a", "p", "p", "l", "e"]
+        //6 str.indexOf(searchValue, startIndex);
+        const text5 = "JavaScript is awesome";
+        console.log(text5.indexOf("Script")); // 4
+        console.log(text5.indexOf("is")); // 11
+        console.log(text5.indexOf("Java", 5)); // -1 (bắt đầu tìm từ chỉ số 5)
+        //7 str.replace(searchValue, replaceValue);
+        const text6 = "I love JavaScript";
+        console.log(text6);
+        console.log(text6.replace("JavaScript", "Python")); // "I love Python"
+        console.log(text6.replace("love", "like")); // "I like JavaScript"
+        //8 str.charAt(index);
+        const text7 = "JavaScript";
+        console.log(text7.charAt(0)); // "J"
+        console.log(text7.charAt(4)); // "S"
+        console.log(text7.charAt(10)); // "" (không tồn tại)
+        const webTechs = [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node",
+            "MongoDB",
+        ]; // List of web technologies
+
+        console.log(webTechs); // all the array items
+        console.log(webTechs.length); // => to know the size of the array, which is 7
+        console.log(webTechs[0]); //  -> HTML
+        console.log(webTechs[6]); //  -> MongoDB
+
+        let lastIndex = webTechs.length - 1;
+        console.log(webTechs[lastIndex]); // -> MongoDB
+
+        //do dai chuoi 
+        const arr = [1, 2, 3, 4];
+        console.log(arr.length); // 4
+        //them phan tu (thay doi mang ban dau)
+        const arr1 = [1, 2];
+        arr1.push(3, 4, "tam");
+        console.log(arr1); // [1, 2, 3, 4 , tam]
+        // loai bo phan tu cuoi cung(thay doi mang ban dau)
+        const arr2 = [1, 2, 3];
+        const lastElement = arr2.pop();
+        console.log(arr2); // [1, 2]
+        console.log(lastElement); // 3
+        // them xoa thay the
+        const arr3 = [1, 2, 3, 4];
+        arr3.splice(1, 2, 5, 6); // Xóa 2 phần tử từ vị trí 1, thêm 5 và 6
+        console.log(arr3); // [1, 5, 6, 4]
+        // trich xuat mang
+        const arr4 = [1, 2, 3, 4];
+        const newArr = arr4.slice(1, 3); // Trích xuất từ vị trí 1 đến 3 (không bao gồm 3)
+        console.log(newArr); // [2, 3]
+        //tim vi tri
+        const arr5 = [1, 2, 3, 4];
+console.log(arr5.indexOf(3)); // 2
+console.log(arr5.indexOf(5)); // -1
+//noi mang
+const arr6 = [1, 2];
+const arr7 = [3, 4];
+const newArr1 = arr6.concat(arr7);
+console.log(newArr1); // [1, 2, 3, 4]
+//ket hop tat ca cac phan tu thanh chuoin
+const arr8 = ["apple", "banana", "cherry"];
+console.log(arr8.join(", ")); // "apple, banana, cherry"\
+
+const person = {
+  name: "Tam Duong ",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+person.greet(); // Output: Hello, John
+
+const person1 = { name: "Tam", age: 18 };
+console.log(person1.name); // John
+console.log(person1["age"]); // 30
+
+const person2 = { name: "John" };
+person2.age = 30; // Thêm key mới
+person2["isVietNam"] = true; // Thêm key mới
+console.log(person2); // { name: 'John', age: 30, isStudent: true }
+
+const person3 = { name: "John" };
+const details = { age: 30, country: "USA" };
+const mergedPerson3 = Object.assign(person3, details);
+console.log(mergedPerson3); // { name: 'John', age: 30, country: 'USA' }
+    </script>
+    const container = Document.querySelector (".container");
+    for (let i= 0; i<product.lengh; i++){
+    console.log(products[i].name)
+    const item = document.createElement("div");
+    item.innerHTML=`
+    cop 
+    `
+    container.appendchild(item);
+    ktra cate gia tri ntn đẩy mảng đấy
+    
+}
+</body>
+//viết html base 
+</html>

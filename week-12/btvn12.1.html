@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="btvn12.1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Palindrome Checker v1.0</h1>
+        <input type="text" class="search" placeholder="Enter a string...">
+        <button class="check">Check</button>
+        <p class="display"></p>
+        <div class="go"></div>
+    </div>
+    <script>
+        const search = document.querySelector('.search');
+        const check = document.querySelector('.check');
+        const display = document.querySelector('.display');
+        const go = document.querySelector('.go');
+
+        check.addEventListener("click", function () {
+            let chuoi = search.value;  
+            let reverseString = "";    
+            let n = chuoi.length;      
+            display.innerHTML = "";
+            go.innerHTML = "";
+
+            if (chuoi === "") {
+                display.textContent = "Hãy nhập đúng chuỗi kí tự";
+                return;
+            }
+
+            let ktra = true;
+            for (let i = 0; i < n; i++) {  
+                reverseString = chuoi[i] + reverseString;  
+            }
+
+            for (let i = 0; i < n; i++) {
+                let div = document.createElement("div");
+                div.textContent = chuoi[i];
+
+                if (chuoi[i] === reverseString[i]) {
+                    div.style.backgroundColor = "#0be881"; 
+                } else {
+                    ktra = false;
+                    div.style.backgroundColor = "#ff3f34";  
+                }
+
+                go.appendChild(div);
+            }
+
+            if (ktra) {
+                display.textContent = "Đây là palindrome!";
+            } else {
+                display.textContent = "Đây không phải palindrome.";
+            }
+        });
+    </script>
+</body>
+</html>

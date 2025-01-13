@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="btvn12.2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List v1.0</h1>
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="Nhập nhiệm vụ mới ở đây">
+            <button id="add-task-btn">Add</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const addTaskBtn = document.getElementById('add-task-btn');
+        const taskList = document.getElementById('task-list');
+        let tasks = []; 
+        function renderTasks() {
+            taskList.innerHTML = ''; 
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                const taskText = document.createElement('span');
+                taskText.textContent = task;
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.setAttribute('data-index', index); 
+                deleteBtn.addEventListener('click', function () {
+                    const taskIndex = this.getAttribute('data-index');
+                    tasks.splice(taskIndex, 1); 
+                    renderTasks(); 
+                });
+
+                li.appendChild(taskText);
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+            });
+        }
+
+        addTaskBtn.addEventListener('click', function () {
+            const task = taskInput.value.trim(); 
+            if (task !== '') {
+                tasks.push(task); 
+                taskInput.value = ''; 
+                renderTasks(); 
+            }
+        });
+    </script>
+</body>
+</html>
