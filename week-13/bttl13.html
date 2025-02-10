@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function dequy() {
+        //     if (n === 0 || n == 1) {
+        //         return 1;
+        //     }
+        //     else
+        //         return n * dequy(n - 1);
+        // }
+        // console.log(dequy(6));
+        const courses = [
+            { id: 1, name: "Javascript", coin: 200 },
+            { id: 2, name: "HTML, CSS", coin: 0 },
+            { id: 3, name: "PHP", coin: 100 },
+            { id: 4, name: "Angular", coin: 0 },
+        ];
+        // courses.forEach(function (course, index) {
+        //   console.log(index, course);
+        // });
+        // var isFree = courses.every(function (course, index) {
+        //   return course.coin === 0;
+        // });
+
+        // console.log(isFree);
+        // let newcourses=courses.map(function(course)){
+
+        // }
+        // let i = 0;
+        // function callback(accumulator){
+        //     console.log(i);
+        //     i++; 
+        //     console.table({
+        //         "Lượt chạy":i,
+        //         "Lưu trữ ": accumulator,
+        //     })
+        // }
+        // let i = 0;
+        // function callback(accumulator,currentValue){
+        //     // console.log(i);
+        //     i++; 
+        //     console.table({
+        //         "Lượt chạy":i,
+        //         "Lưu trữ ": accumulator,
+        //         "Gia tien":currentValue.coin,
+        //         "Tong tien": accumulator+currentValue.coin,
+        //     })
+        //     return accumulator+currentValue.coin;
+        // }
+        // const totalCoin = courses.reduce(callback, 0);
+        // console.log(totalCoin);
+        const arr = [2, 2, 32, 42, 52];
+        // console.log(total);
+        let sum = arr.reduce((arr, value) => arr + value)
+        console.log(sum);
+        let nhan = arr.reduce((arr, value) => arr * value)
+        console.log(nhan);
+//mô phỏng hàm every 
+//         function customevery(arr, mycallback) {
+//             for (let i = 0; i < arr.length; i++) {
+//                 if (mycallback(arr[i], i, arr)) return false;
+//             }
+//              return true
+//         }
+// function mycallback(currentValue,index,originArray){
+//     return currentValue% 2!=0;
+// }
+// const result =customevery(arr, mycallback)
+// console.log(result);
+
+
+//mô phỏng hàm find
+// function customfind(arr, mycallback) {
+//             for (let i = 0; i < arr.length; i++) {
+//                 if (mycallback(arr[i], i, arr)) return arr[i];
+//             }
+//              return undefined
+//         }
+// function mycallback(currentValue,index,originArray){
+//     return currentValue% 2==0;
+// }
+// const result =customfind(arr, mycallback)
+// console.log(result);
+        // const result = customSome(arr, mycallback) {
+        //     for (let i=0; i<arr.length;i++){
+        //         if (mycallback(arr[i]),i, arr))
+        //     }
+        // }
+        // mô phỏng reduce
+
+    </script>
+</body>
+
+</html>
