@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm thông tin Pokémon</title>
+    <link rel="stylesheet" href="btvn.2.css">
+</head>
+<body>
+    <h1>Search Pokemon v1.0</h1>
+    <form id="searchForm">
+        <input type="text" id="pokemonName" placeholder="Nhập tên Pokémon">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const pokemonName = document.getElementById('pokemonName').value.trim();
+            const resultDiv = document.getElementById('result');
+
+            if (!pokemonName) {
+                resultDiv.innerHTML = '<p>Vui lòng nhập tên Pokémon.</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
+                if (!response.ok) {
+                    throw new Error('Không tìm thấy thông tin Pokémon.');
+                }
+                const data = await response.json();
+                resultDiv.innerHTML = `
+                    <div class="pokemon-info">
+                        <img src="${data.sprites.front_default}" alt="${data.name}">
+                        <div>
+                            <h2>${data.name}</h2>
+                            <p>Chiều cao: ${data.height / 10} m</p>
+                            <p>Cân nặng: ${data.weight / 10} kg</p>
+                            <p>Loại: ${data.types.map(type => type.type.name).join(', ')}</p>
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p>${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

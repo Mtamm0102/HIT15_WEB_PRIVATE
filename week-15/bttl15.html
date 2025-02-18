@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       fetch("https://restcountries.com/v3.1/name/Thailand")
+            //.then((response) => response.json())
+            .then(function (res) {
+                return res.json();
+            }
+            )
+            .then((data) => {
+                console.log(data[0])
+                const ten = data[0].name.official
+                const thudo = data[0].capital[0]
+                const vung = data[0].region
+                const dientich = data[0].area
+                const danso = data[0].population
+                const co = data[0].flags.png
+                console.log(ten,thudo,vung,dientich, danso, co);                
+            }
+            )
+            
+    </script>
+</body>
+</html>
